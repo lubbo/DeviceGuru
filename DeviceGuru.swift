@@ -319,11 +319,12 @@ open class DeviceGuru {
       return CGSize(width: 4032, height: 3024)
 
     default:
-      print("We have no resolution for your device's camera listed in this category. Please, take photo with back camera of your device, get its resolution in pixels (via Preview Cmd+I for example) and add a comment to this repository (https://github.com/InderKumarRathore/DeviceGuru) on GitHub.com in format Device = Wpx x Hpx.")
+        return CGSize.zero
+//      print("We have no resolution for your device's camera listed in this category. Please, take photo with back camera of your device, get its resolution in pixels (via Preview Cmd+I for example) and add a comment to this repository (https://github.com/InderKumarRathore/DeviceGuru) on GitHub.com in format Device = Wpx x Hpx.")
     }
-    print("Your device is: \(hardwareDescription() ?? "unknown")")
+//    print("Your device is: \(hardwareDescription() ?? "unknown")")
 
-    return CGSize.zero
+//    return CGSize.zero
   }
 
   // MARK: - Private
@@ -334,10 +335,10 @@ open class DeviceGuru {
   ///     - hardware: `String` hardware type of the device
   ///
   private func logMessage(_ hardware: String) {
-    print("""
-  This is a device which is not listed in this library. Please visit https://github.com/InderKumarRathore/DeviceGuru/issues/new and submit the issue there.\n
-    Your device hardware string is|\(hardware)|"
-""")
+//    print("""
+//  This is a device which is not listed in this library. Please visit https://github.com/InderKumarRathore/DeviceGuru/issues/new and submit the issue there.\n
+//    Your device hardware string is|\(hardware)|"
+//""")
   }
 
   
